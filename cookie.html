@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="cookie.css">
+
+  <!-- Put your challenge-specific CSS in here -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="cookie_model.js" type="text/javascript"></script>
+  <script src="cookie_view.js" type="text/javascript"></script>
+
+  <title></title>
+</head>
+
+  <div class="span6">
+    <h2>Prep Table</h2>
+    <ul id="prep_batches">
+    </ul>
+    <form id="new_batch" name="new_batch">
+      <label>Cookie type:</label>
+      <input name="batch_type" type="text" placeholder="e.g. 'oatmeal raisin'" />
+      <br />
+
+      <label for="bake_time">Bake time:</label>
+      <input name="bake_time" type="number" min="0" max="20" />
+      <br />
+
+      <input type="submit" value="Make Batch"/>
+    </form>
+  </div>
+
+  <div class="span6">
+    <h2>Oven</h2>
+    <table id="oven">
+      <tr>
+        <td id="rack_0">[empty]</td>
+      </tr>
+      <tr>
+        <td id="rack_1">[empty]</td>
+      </tr>
+      <tr>
+        <td id="rack_2">[empty]</td>
+      </tr>
+    </table>
+
+    <button id="bake">Bake for 1 minute</button>
+  </div>
+</div>
